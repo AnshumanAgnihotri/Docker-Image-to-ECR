@@ -23,4 +23,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.033473129940 }}.dkr.ecr.ap-northeast-1.amazonaws.com/my-docker-image:${{ github.sha }}
+            ${{ secrets.Account_ID }}.dkr.ecr.ap-northeast-1.amazonaws.com/my-docker-image:${{ github.sha }}
