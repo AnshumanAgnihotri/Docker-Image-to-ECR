@@ -24,5 +24,5 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t testcontainer .
-          docker dockerimage $testimage:latest $033473129940.dkr.ecr.$ap-northeast-1.amazonaws.com/$testimage:latest
+          docker tag $testimage:latest $033473129940.dkr.ecr.$ap-northeast-1.amazonaws.com/$testimage:latest
           docker push $033473129940.dkr.ecr.$ap-northeast-1.amazonaws.com/$testimage:latest
