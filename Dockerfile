@@ -15,3 +15,6 @@ COPY . .
 
 # Set the container's startup command to run the application
 CMD ["npm", "start"]
+
+
+
