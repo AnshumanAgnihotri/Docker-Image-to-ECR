@@ -23,8 +23,8 @@ jobs:
           registry: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
                     aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/v5v0q5f5
 
-      - name: Build and push Docker image
+      - name: Build and push Docker Image
         run: |
              docker build -t testimage .
              docker tag testimage:latest public.ecr.aws/v5v0q5f5/testimage:latest
-             docker push public.ecr.aws/v5v0q5f5/testimage:latest
+             docker push public.ecr.aws/v5v0q5f5/testimage:latest 
