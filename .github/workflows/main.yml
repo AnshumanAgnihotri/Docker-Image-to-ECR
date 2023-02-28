@@ -20,7 +20,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          registry: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+          registry: $033473129940.dkr.ecr.$us-east-1.amazonaws.com
                     aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/v5v0q5f5
 
       - name: Build and push Docker image
