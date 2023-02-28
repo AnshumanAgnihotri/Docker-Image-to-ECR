@@ -25,10 +25,11 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           registry: $033473129940.dkr.ecr.$us-east-1.amazonaws.com
-                    aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/v5v0q5f5
+                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 033473129940.dkr.ecr.us-east-1.amazonaws.com
 
       - name: Build and push Docker image
         run: |
-             docker build -t testimage .
-             docker tag testimage:latest public.ecr.aws/v5v0q5f5/testimage:latest
-             docker push public.ecr.aws/v5v0q5f5/testimage:latest 
+             docker build -t testprivate .
+             docker tag testprivate:latest 033473129940.dkr.ecr.us-east-1.amazonaws.com/testprivate:latest
+             docker push 033473129940.dkr.ecr.us-east-1.amazonaws.com/testprivate:latest
+             
