@@ -18,7 +18,7 @@ ENV DESTINATION_FILE=/app/destination
 ENV SOURCE_FILE=/app/source
 
 # Expose port 3000 for the application to listen on
-EXPOSE 3000
+EXPOSE 3001
 
 # Start the application
 CMD [ "npm", "start" ]
