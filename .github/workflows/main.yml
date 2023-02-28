@@ -26,3 +26,8 @@ jobs:
           docker build -t 033473129940.dkr.ecr.ap-northeast-1.amazonaws.com/testimage:latest .
           docker tag 033473129940.dkr.ecr.ap-northeast-1.amazonaws.com/testimage:latest 033473129940.dkr.ecr.ap-northeast-1.amazonaws.com/testcontainernodejs:latest
           docker push $033473129940.dkr.ecr.$ap-northeast-1.amazonaws.com/$testimage
+
+
+          docker build -t $testimage/$testimage:$testcontainer .
+          docker push $testimage/$testimage:$testcontainer
+          echo "image=$testimage/$testimage:$testcontainer" >> $GITHUB_OUTPUT
