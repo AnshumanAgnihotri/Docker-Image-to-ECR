@@ -17,6 +17,10 @@ jobs:
           aws-region: us-east-1
       - name: Login to ECR
         uses: aws-actions/amazon-ecr-login@v1
+        env:
+               ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+               IMAGE_TAG: ${{ github.sha }}
+               ECR_REPOSITORY: testimage
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
