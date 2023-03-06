@@ -22,13 +22,13 @@ jobs:
                IMAGE_TAG: ${{ github.sha }}
                ECR_REPOSITORY: testimage
       - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
           registry: $033473129940.dkr.ecr.$us-east-1.amazonaws.com
                     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 537611828196.dkr.ecr.us-east-1.amazonaws.com
       - name: Build and push Docker image
         run: |
              docker build -t node_repo .
              docker tag node_repo:latest 537611828196.dkr.ecr.us-east-1.amazonaws.com/node_repo:latest
-            docker push 537611828196.dkr.ecr.us-east-1.amazonaws.com/node_repo:latest
+             docker push 537611828196.dkr.ecr.us-east-1.amazonaws.com/node_repo:latest
+
+             
              
