@@ -20,7 +20,7 @@ jobs:
         env:
          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
          IMAGE_TAG: ${{ github.sha }}
-         ECR_REPOSITORY: testimage
+         ECR_REPOSITORY: node_repo
       - name: Build and push Docker image
     registry: $537611828196.dkr.ecr.$us-east-1.amazonaws.com
               aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 537611828196.dkr.ecr.us-east-1.amazonaws.com
